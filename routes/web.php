@@ -15,10 +15,10 @@ use App\Http\Controllers\TaskController;
 |
 */
 Route::get('/', function () {
-    return view('welcome');
+    return view('login');
 });
 
-Route::get('dashboard', [TaskController::class, 'index']);
+Route::get('dashboard', [TaskController::class, 'index'])->name('dashboard');
 Route::post('store', [TaskController::class, 'store']);
 Route::post('edit', [TaskController::class, 'edit']);
 Route::post('delete', [TaskController::class, 'destroy']);
